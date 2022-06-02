@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Page</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../js/map.js">
+</head>
+
+<body>
+    <!--구성 : 위치 , 메뉴 , 사진 , 설명 ,영업시간 ,연락처 -->
+    <div class="page">
+        <h1>우진해장국</h1>
+        <article class="text">
+            <div class="grade">
+                평점
+                리뷰
+            </div>
+
+            <div class="explain">
+                맛집 설명입니다.
+            </div>
+
+            <div class="address">
+                위치(주소)입니다
+            </div>
+
+            <div class="openingHours">
+                영업시간 : 10:00 ~ 22:00
+            </div>
+
+            <div class="contact">
+                연락처 010 - 7607 - 9182
+            </div>
+        </article>
+        <div class="menu">
+            (메뉴)
+            <img src="../img/우진해장국.png" alt="">
+            <img src="../img/우진해장국2.png" alt="">
+            <img src="../img/우진해장국3.png" alt="">
+        </div>
+
+        <!-- 카카오 api 이용한 지도 -->
+        <div class="map" id="map" style="width:500px;height:400px;">
+            지도
+        </div>
+        <script type="text/javascript"
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6dfd9bc42904c547af36337cb995e0cf"></script>
+        <script>
+            var container = document.getElementById('map');
+            var options = {
+                center: new kakao.maps.LatLng(33.450701, 126.570667),
+                level: 3
+            };
+
+            var map = new kakao.maps.Map(container, options);
+        </script>
+    </div>
+
+</body>
+
+</html>
