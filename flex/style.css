@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 550px;
+    height: 500px;
+    background-color: brown;
+    /* div로 묶은 상위 블록(부모요소)을 display에 flex를 해준다*/
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* 리버스 속성이 다 있음 */
+}
+
+.items{
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    float: left;
+    /*자식 요소에 flex 속성주기*/
+
+    /* margin: 10px; */
+}
+
+.num8{
+    /* 순서적용 */
+    order: -1; 
+}
+
+.num7{
+    order: -2;
+}
