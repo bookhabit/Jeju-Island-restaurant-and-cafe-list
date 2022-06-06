@@ -9,12 +9,19 @@ h1 {
     text-align: center;
 }
 
-.menu {
+div.menu {
+    margin: 10px;
+    border: 1px solid red;
     text-align: center;
+    width: 100%;
+    height: 200px;
 }
 
-img {
-    width: 30%;
+.menu img {
+    display: inline;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
 }
 
 .page {
@@ -33,5 +40,6 @@ img {
 
 .map {
     float: right;
-
+    width: 200px;
+    height: 100px;
 }
