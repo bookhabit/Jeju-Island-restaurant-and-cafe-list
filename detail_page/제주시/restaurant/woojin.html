@@ -13,52 +13,82 @@
 <body>
     <!--구성 : 위치 , 메뉴 , 사진 , 설명 ,영업시간 ,연락처 -->
     <div class="page">
+        <div class="map" id="map">
+            지도 크기 위치
+        </div>
         <div class="header_wrap">
             <h1>우진해장국</h1>
         </div>
         <article class="text">
-            <div class="grade">
-                평점
-                리뷰
-            </div>
-
             <div class="explain">
-                맛집 설명입니다.
+                우진해장국은 제주도고사리로 만든 음식 고사리육개장과 몸국 전문점으로 딱 4가지 메뉴를 판매하고 있다. <br>
+                제주도에서만 먹을 수 있다는 몸국을 먹을 수 있다.<br>
+                제주도 맛집으로 유명하여 웨이팅이 많다.<br>
+                따라서 알아야 할 점은 우진해장국에 도착하면 내부에 들어가서 번호표를 뽑아야 순번 예약이 된다는 점을 기억하자.
             </div>
 
             <div class="address">
-                위치(주소)입니다
+                <br>주소: 제주특별자치도 제주시 삼도2동 서사로11
             </div>
 
             <div class="openingHours">
-                영업시간 : 10:00 ~ 22:00
+                <br>영업시간 : 06:00 ~ 22:00 <br>
+                (명절휴무)
             </div>
 
             <div class="contact">
-                연락처 010 - 7607 - 9182
+                <br>연락처 064-757-3393
+            </div>
+            <div class="grade">
+                <br>
+                <button>평점</button>
+                <button id="review" onclick="showReview()">리뷰</button>
             </div>
         </article>
         <div class="menu">
-            (메뉴)
             <img src="../img/우진해장국.png" alt="">
             <img src="../img/우진해장국2.png" alt="">
             <img src="../img/우진해장국3.png" alt="">
         </div>
-
-        <!-- 카카오 api 이용한 지도 -->
-        <div class="map" id="map" style="width:500px;height:400px;">
-            지도
+        <div class="review">
+            리뷰 작성글
+            <div class="review_text" style="display: none;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, voluptatibus porro. Aut dolorum voluptas, blanditiis reprehenderit natus quasi in consectetur quisquam. Tempore iste quisquam aut illo odit tempora possimus! Ullam?
+            </div>
         </div>
+
+        <script>
+            // 리뷰작성글 onclick
+            function showReview(){
+                var review_text = document.getElementsByClassName("review_text")
+            }
+        </script>
+        <!-- 카카오 api 이용한 지도 -->
         <script type="text/javascript"
-            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6dfd9bc42904c547af36337cb995e0cf"></script>
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6dfd9bc42904c547af36337cb995e0cf">
+        </script>
         <script>
             var container = document.getElementById('map');
             var options = { // 위도 , 경도 설정
-                center: new kakao.maps.LatLng(33.51, 126.52),
+                center: new kakao.maps.LatLng(33.5115, 126.52),
                 level: 3
             };
 
             var map = new kakao.maps.Map(container, options);
+
+            // 마커가 표시될 위치입니다 
+            var markerPosition  = new kakao.maps.LatLng(33.5115, 126.52); 
+
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+            position: markerPosition
+        });
+
+        // 마커가 지도 위에 표시되도록 설정합니다
+        marker.setMap(map);
+
+        // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
+        // marker.setMap(null);    
         </script>
     </div>
 

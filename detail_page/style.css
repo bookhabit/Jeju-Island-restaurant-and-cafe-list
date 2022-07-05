@@ -5,41 +5,50 @@ body {
     margin: 0px;
 }
 
+.page{
+    display: inline;
+}
 h1 {
-    text-align: center;
+    margin: 30px;
+    text-align: left;
+}
+
+.text {
+    margin: 30px;
+    border: 1px solid gray;
+    width: 49%;
+    height: auto;
+    padding: 10px;
 }
 
 div.menu {
-    margin: 10px;
+    margin: 30px;
     border: 1px solid red;
-    text-align: center;
-    width: 100%;
+    text-align: left;
+    width: 50%;
     height: 200px;
+    overflow: hidden;
 }
 
 .menu img {
-    display: inline;
     width: 200px;
     height: 200px;
     overflow: hidden;
 }
 
-.page {
-    border: 5px solid black;
-    width: 100vw;
-    height: 100vh;
-}
 
-
-.text {
-    border: 5px solid gray;
-    width: 50%;
-    height: auto;
-    margin: auto;
-}
 
 .map {
     float: right;
-    width: 200px;
-    height: 100px;
+    width: 40%;
+    height: 100%;
+    margin-right: 10p;
+}
+
+.review{
+    border: 1px solid blue;    
+    width: 49%;
+    height: auto;
+    margin: 30px;
+    padding: 10px;
 }
